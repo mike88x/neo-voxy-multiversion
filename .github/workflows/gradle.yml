@@ -8,6 +8,10 @@
 name: Java CI with Gradle
 
 on:
+  schedule:
+    - cron: '0 17 * * 6'
+      timezone: 'Asia/Shanghai'
+  workflow_dispatch: # 建议保留手动触发以便调试
   push:
     branches: [ "multiversion" ]
   pull_request:
